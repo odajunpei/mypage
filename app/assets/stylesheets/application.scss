@@ -26,21 +26,16 @@
   right:0;
   bottom:0;
   margin: auto;
-  background-color:#fff;
+  background-color:#000;
   z-index:99;
   -webkit-animation: byeShutter 2.4s forwards;
   animation: byeShutter 3.5s forwards;
 }
 
-.slider {
-  background-image: image-url("grand-papa.png");
-  background-image: image-url("grand-mama.png");
-  height: 100%;
-}
 .opening {
   position: absolute;
   width: 200px;
-  height: 50px;
+  height: 300px;
   background-size: cover;
   top: 0%;
   left: 0%;
@@ -48,8 +43,9 @@
   bottom: 0%;
   margin: auto;
   background-image: image-url("logo.png");
-  z-index:100;
+  z-index:-100;
 }
+
 @keyframes byeShutter {
 70% {
   opacity: 1;
@@ -64,6 +60,7 @@
 .card{
   margin: 2%;
 }
+
 .background_image{
   background-image: image-url("background.jpg") ;
   height: 100%;
@@ -121,7 +118,6 @@ iframe{
 .nav-item{
   margin: 0.3%;
   white-space: nowrap;
-
 }
 
 .navbar{
@@ -135,7 +131,6 @@ iframe{
   margin-right: 5%;
 }
 
-
 .hidden_box .hidden_show {
     height: 0;
     padding: 0;
@@ -143,7 +138,6 @@ iframe{
     opacity: 0;
     transition: 0.8s;
     position:relative;
-    // padding-top:75%;
 }
 
 .hidden_box input:checked ~ .hidden_show {
@@ -154,7 +148,6 @@ iframe{
 
 footer{
   background-color:rgba(255,255,255,0.5);
-  // font-family: cursive;
   font-weight : 600;
 }
 
@@ -258,9 +251,7 @@ table tr{
 .post-size{
   width: 400px;
   height: 100px;
-
 }
-
 
 h1{
   font-size: 2.0rem;
@@ -303,16 +294,16 @@ h4{
 
   h4{
   font-size: 0.7rem;
-}
+  }
 
   .form-size{
-  width: 100%;
-}
+    width: 100%;
+  }
 
-iframe{
-  width: 100%;
-  height: 100%;
-}
+  iframe{
+    width: 100%;
+    height: 100%;
+  }
 
 .submitbtn{
   width: 320px;
