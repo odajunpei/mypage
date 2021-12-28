@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2021_12_28_063945) do
 
   create_table "applications", force: :cascade do |t|
     t.string "url"
+    t.string "giturl"
     t.string "image"
     t.string "name"
     t.string "introduction"
