@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'homes#top'
 
    namespace :admin do
-    resources :applications, only: [:index, :create, :show, :edit, :update]
+    resources :applications, only: [:index, :create, :show, :edit, :update, :new]
   end
 end

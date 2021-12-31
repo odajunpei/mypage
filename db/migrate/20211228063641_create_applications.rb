@@ -3,7 +3,7 @@ class CreateApplications < ActiveRecord::Migration[5.2]
     create_table :applications do |t|
       t.string :url
       t.string :giturl
-      t.string :image
+      t.integer :image_id
       t.string :name
       t.string :introduction
       t.timestamps
