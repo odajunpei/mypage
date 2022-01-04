@@ -1,6 +1,6 @@
 class Admin::ApplicationsController < ApplicationController
 
-  # before_action :authenticate_admin!
+  before_action :authenticate_admin!
 
   def new
     @application = Application.new
