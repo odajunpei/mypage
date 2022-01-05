@@ -21,13 +21,10 @@
     <div class="col-10 offset-1">
       <div class="d-flex justify-content-between">
         <h2 class="mt-3 pb-4">製作物一覧</h2>
-        <h4 class="mt-4">
-          <%= link_to "新規登録", new_admin_application_path %>
-        </h4>
       </div>
       <% @applications.each do |application| %>
       <div class="card w-60 text-center">
-        <h1 class="text-center"><%= application.name %></h1>
+        <h1 class="text-center"><%= link_to <%= application.name %></h1>
         <div class="card-image-top text-center">
           <%= attachment_image_tag application, :image, size:"150x150", format: 'jpeg' %>
         </div>
