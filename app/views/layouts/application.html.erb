@@ -23,11 +23,9 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
               <% if admin_signed_in? %>
-                <li class="nav-item"><%= link_to '投稿会員一覧', '#', class: "btn btn-warning" %></li>
-                <li class="nav-item"><%= link_to '家族会員一覧', '#', class: "btn btn-warning" %></li>
-                <li class="nav-item"><%= link_to '投稿一覧', '#', class: "btn btn-warning" %></li>
-                <li class="nav-item"><%= link_to '家族コード一覧', '#', class: "btn btn-warning" %></li>
-                <li class="nav-item"><%= link_to "お問い合わせ画面", '#', class:"btn btn-warning" %></li>
+                <li class="nav-item"><%= link_to 'アプリ投稿', '#', class: "btn btn-warning" %></li>
+                <li class="nav-item"><%= link_to 'ニュース投稿', '#', class: "btn btn-warning" %></li>
+                <li class="nav-item"><%= link_to 'お問い合わせ回答', '#', class: "btn btn-warning" %></li>
                 <li class="nav-item"><%= link_to "ログアウト", '#', method: :delete, class: "btn btn-warning" %></li>
               <% else %>
                 <li class="nav-item"><%= link_to 'profile', '#', class: "nav-text" %></li>
