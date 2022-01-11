@@ -24,7 +24,7 @@
       </div>
       <% @applications.each do |application| %>
       <div class="card w-60 text-center">
-        <h1 class="text-center"><%= link_to <%= application.name %></h1>
+        <h1 class="text-center"><%= link_to application_path(application) do %><%= application.name %><% end %></h1>
         <div class="card-image-top text-center">
           <%= attachment_image_tag application, :image, size:"150x150", format: 'jpeg' %>
         </div>
