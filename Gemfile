@@ -71,3 +71,8 @@ gem 'rails-i18n'
 gem 'enum_help'
 gem 'hashid-rails', '~> 1.0'
 gem 'devise'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
