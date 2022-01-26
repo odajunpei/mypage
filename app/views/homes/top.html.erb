@@ -22,7 +22,7 @@
       <div class="d-flex justify-content-between">
         <h2 class="mt-3 pb-4">製作物一覧</h2>
       </div>
-      <% if @application.exist? %>
+      <% if @application.present? %>
       <% @applications.each do |application| %>
       <div class="card w-60 text-center">
         <h1 class="text-center"><%= link_to application_path(application) do %><%= application.name %><% end %></h1>
