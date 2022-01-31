@@ -17,6 +17,11 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+.appliimage {
+  object-fit: cover;
+  width: 500px;
+  height: 250px;
+}
 .profile-image {
   width: 280px;
   height: 500px;
