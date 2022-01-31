@@ -19,25 +19,25 @@
             <th>タイトル</th>
           </tr>
           <tr>
-            <td><%= @application.name %></td>
+            <td><%= safe_join(@application.name.split("\n"),tag(:br)) %></td>
           </tr>
           <tr>
             <th>アプリ説明</th>
           </tr>
           <tr>
-            <td class= "text-break"><%= @application.introduction %></td>
+            <td class= "text-break"><%= safe_join(@application.introduction.split("\n"),tag(:br)) %></td>
           </tr>
           <tr>
             <th>url</th>
           </tr>
-            <td><%= @application.url %></td>
+            <td><%= safe_join(@application.url.split("\n"),tag(:br)) %></td>
           </tr>
           <tr>
             <th>githubのurl</th>
           </tr>
           <tr>
             <td>
-              <%= @application.giturl %>
+              <%= safe_join(@application.giturl.split("\n"),tag(:br)) %>
             </td>
           </tr>
         </tbody>
