@@ -23,7 +23,7 @@
             <div class="card w-60 text-center">
               <h1 class="text-center"><%= link_to application_path(application) do %><%= application.name %><% end %></h1>
               <div class="card-image-top text-center">
-                <%= attachment_image_tag application, :image, size:"250x250", format: 'jpeg' %>
+                <%= attachment_image_tag application, :image, format: 'jpeg', class: "iimage" %>
               </div>
             </div>
           <% end %>

@@ -17,13 +17,10 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-.box {
-  width: 800px;
-}
-.appliimage {
+.iimage {
   object-fit: cover;
   width: 500px;
-  height: 250px;
+  height: 300px;
 }
 .profile-image {
   width: 280px;
@@ -79,7 +76,7 @@
 }
 
 .card{
-  margin: 4%;
+  margin: 2%;
 }
 
 .background_image{
@@ -239,6 +236,13 @@ table tr{
 
 /*タブレット横置き*/
 @media screen and (max-width:1024px) {
+
+.iimage {
+  object-fit: cover;
+  width: 400px;
+  height: 280px;
+}
+
 .submitarea{
   height: 450px;
 }
@@ -289,6 +293,13 @@ h4{
 
 /*スマホサイズ*/
 @media screen and (max-width: 425px) {
+
+  .iimage {
+  object-fit: cover;
+  width: 250px;
+  height: 150px;
+  }
+
   h1 {
     font-size: 1.1rem;
   }
