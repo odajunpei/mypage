@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_12_28_072426) do
   create_table "applications", force: :cascade do |t|
     t.string "url"
     t.string "giturl"
-    t.integer "image_id"
+    t.string "image_id"
     t.string "name"
     t.string "introduction"
     t.datetime "created_at", null: false
