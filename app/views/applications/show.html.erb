@@ -32,9 +32,7 @@
             <th>url</th>
           </tr>
           <tr>
-
-            <td> <%= link_to @application.url do %><%= safe_join(@application.url.split("\n"),tag(:br)) %><% end %></td>
-
+            <td><%= safe_join(@application.url.split("\n"),tag(:br)) %></td>
           </tr>
           <tr>
             <th>github</th>
