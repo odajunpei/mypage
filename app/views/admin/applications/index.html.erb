@@ -7,13 +7,17 @@
           <%= link_to "新規登録", new_admin_application_path %>
         </h4>
       </div>
+      <% if @applications.present? %>
       <% @applications.each do |application| %>
       <div class="card w-60 text-center">
         <h1 class="text-center"><%= link_to admin_application_path(application) do %><%= application.name %><% end %></h1>
         <div class="card-image-top text-center">
-          <%= attachment_image_tag application, :image, size:"150x150", format: 'jpeg' %>
+          <%= attachment_image_tag application, :image, size:"250x250", format: 'jpeg' %>
         </div>
       </div>
+      <% end %>
+      <% else %>
+        <h3 class="text-danger">表示する内容はありません。</h3>
       <% end %>
    </div>
   </div>

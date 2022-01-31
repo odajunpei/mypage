@@ -36,6 +36,12 @@ class Admin::ApplicationsController < ApplicationController
     end
   end
 
+  def destroy
+    @application = Application.find(params[:id])
+    @application.destroy
+    redirect_to admin_applications_path
+  end
+
 private
 
     def application_params

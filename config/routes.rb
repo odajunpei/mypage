@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'inquiries/:name/:id' => 'inquiries#show'
   get 'homes/profile' => 'homes#profile'
    namespace :admin do
-    resources :applications, only: [:index, :create, :show, :edit, :update, :new]
+    resources :applications, only: [:index, :create, :show, :edit, :update, :new, :destroy]
     resources :inquiries, only: [:index, :edit, :update]
   end
 end
