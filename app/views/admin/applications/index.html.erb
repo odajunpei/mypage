@@ -11,8 +11,8 @@
       <% @applications.each do |application| %>
       <div class="card w-60 text-center">
         <h1 class="text-center"><%= link_to admin_application_path(application) do %><%= application.name %><% end %></h1>
-        <div class="card-image-top text-center">
-          <%= attachment_image_tag application, :image, size:"250x250", format: 'jpeg' %>
+        <div class="card-image-top text-center box">
+          <%= attachment_image_tag application, :image, format: 'jpeg', class:"appliimage" %>
         </div>
       </div>
       <% end %>
