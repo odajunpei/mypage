@@ -9,29 +9,37 @@
         <tbody>
           <tr>
             <th>写真</th>
+          </tr>
+          <tr>
             <td>
               <%= attachment_image_tag @application, :image, size:"200x200" %>
             </td>
           </tr>
-          <tr></tr>
+          <tr>
             <th>タイトル</th>
+          </tr>
+          <tr>
             <td><%= @application.name %></td>
           </tr>
           <tr>
             <th>アプリ説明</th>
+          </tr>
+          <tr>
             <td class= "text-break"><%= @application.introduction %></td>
           </tr>
           <tr>
             <th>url</th>
+          </tr>
             <td><%= @application.url %></td>
           </tr>
           <tr>
             <th>githubのurl</th>
+          </tr>
+          <tr>
             <td>
               <%= @application.giturl %>
             </td>
           </tr>
-
         </tbody>
       </table>
       <div class="text-right"><%= link_to "編集する", edit_admin_application_path(@application), class:"btn btn-primary" %></div>
