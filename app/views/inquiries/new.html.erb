@@ -23,7 +23,7 @@
             <td><%= f.text_field :name, class:"form-size" %></td>
           </tr>
           <tr>
-            <th><h3>メールアドレス<span class="text-danger">（必須）</span></h3></th>
+            <th><h3>返信先メールアドレス<span class="text-danger">（必須）</span></h3></th>
           </tr>
           <tr>
             <td><%= f.email_field :email, autocomplete: "email", class:"form-size" %></td>
@@ -43,7 +43,7 @@
           <tr>
             <td class="text-center">
               <%= f.hidden_field :replyok, value: "未返信" %>
-              <%= f.submit 'お問い合わせ', class: 'btn btn-outline-dark text-right' %>
+              <%= f.submit 'お問い合わせ', class: 'btn btn-primary text-right' %>
             </td>
           </tr>
         </table>

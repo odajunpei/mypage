@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 mt-3">
+      <h1 class="mt-3 text-center">お問い合わせ詳細(返信メール)</h1>
+      <%= form_with model:@inquiry, url:admin_inquiry_path(@inquiry), local:true do |f| %>
+        <table class="table">
+          <tr>
+            <th><h3>宛先</h3></th>
+             <td class="text-left">
+              <h3><%= @inquiry.email %></h3>
+            </td>
+          </tr>
+          <tr>
+            <th><h3>件名</h3></th>
+            <td class="text-left">
+              <h3>[回答]<br>件名:<%= @inquiry.title %>のお問い合わせについて</h3>
+            </td>
+          </tr>
+          <tr>
+            <th><h3>本文</h3></th>
+            <td class="text-left">
+              <h3><%= @inquiry.name %>様<br>
+                 お世話になっております。<br>
+                「Warm」へのお問い合わせありがとうございました。<br><br>
+                 以下のお問い合わせ頂きました内容についてご回答させて頂きます。<br>
+                 お問い合わせ内容↓<br>
+                 <%= @inquiry.inquiry %><br>
+                <% if @inquiry.reply.present? %>
+                [回答]<br>
+                  <%= @inquiry.reply %>
+                <% end %>
+            </td>
+          </tr>
+          <% if @inquiry.reply.blank? %>
+          <tr>
+            <th>
+              <h3><%= f.label :reply, "回答" %></h3>
+            </th>
+            <td>
+              <%= f.text_area :reply, class: "form-area-size" %>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <%= f.hidden_field :replyok, value: "返信済み" %>
+              <%= f.submit "メールを送信する。", class:"btn btn-outline-success"  %><br>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+        <% end %>
+        <div class="text-center">
+          <%= link_to 'お問い合わせ一覧へ', admin_inquiries_path, class:"ml-1" %>
+        </div>
+    </div>
+  </div>
+</div>

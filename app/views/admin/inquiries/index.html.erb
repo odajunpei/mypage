@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-1">
+      <h1>お問い合わせ一覧</h1>
+      <table class="table tablef">
+        <!--<thead>-->
+        <!--  <tr>-->
+        <!--    <th class="text-center">%= sorttable "id", "ID" %></th>-->
+        <!--    <th class="text-center">%= sorttable "name", "氏名" %></th>-->
+        <!--    <th class="text-center">%= sorttable "email", "メールアドレス" %></th>-->
+        <!--    <th class="text-center">%= sorttable "title","タイトル" %></th>-->
+        <!--    <th class="text-center">%= sorttable "replyok", "返信" %></th>-->
+        <!--    <th class="text-center">%= sorttable "created_at", "登録日時" %></th>-->
+        <!--  </tr>-->
+        <!--</thead>-->
+        <tbody>
+          <% @inquiries.each do |inquiry| %>
+        <tr>
+          <td class="text-center">
+            <%= inquiry.id %>
+          </td>
+          <td class="text-center">
+            <%= inquiry.name %>
+          </td>
+          <td class="text-center">
+            <%= inquiry.email %>
+          </td>
+          <td class="text-center">
+            <%= link_to edit_admin_inquiry_path(inquiry) do %>
+              <%= inquiry.title %>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <%= inquiry.replyok %>
+          </td>
+          <td class="text-center">
+            <%= inquiry.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+          </td>
+        </tbody>
+      　<% end %>
+      </table>
+      <%= paginate @inquiries %>
+    </div>
+  </div>
+</div>
