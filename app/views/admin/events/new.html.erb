@@ -1,0 +1,53 @@
+<div class="container-fuluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4">
+        <div class="page-title mt-3">
+          <h1>News</h1>
+        </div>
+        <% if @event.errors.any? %>
+          <div class="alert alert-danger" role="alert">
+            <strong>入力内容にエラーがあります</strong>
+            <ul>
+              <% @event.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= form_with model:@event, url:admin_events_path, local:true do |f| %>
+        <table class="table tablef">
+          <tr>
+            <th><h3>名前<span class="text-danger">（必須）</span></h3></th>
+          </tr>
+          <tr>
+            <td><%= f.text_field :name, class:"form-size" %></td>
+          </tr>
+          <tr>
+            <th><h3>説明<span class="text-danger">（必須）</span></h3></th>
+          </tr>
+          <tr>
+            <td><%= f.text_area :introduction autocomplete: "email", class:"form-size" %></td>
+          </tr>
+          <tr>
+            <th><h3>URL</h3></th>
+          </tr>
+          <tr>
+            <td><%= f.text_field :url,  class:"form-size" %></td>
+          </tr>
+          <tr>
+            <th><h3>画像</h3></th>
+          </tr>
+          <tr>
+            <td><%= f.attachment_field :image, size:"200x200" %></td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <%= f.hidden_field :replyok, value: "未返信" %>
+              <%= f.submit 'お問い合わせ', class: 'btn btn-primary text-right' %>
+            </td>
+          </tr>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>
