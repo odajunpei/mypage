@@ -39,6 +39,6 @@ class Admin::EventsController < ApplicationController
     private
 
     def event_params
-      params.require(:event).permit(:name, :introduction, :date, :url, :giturl)
+      params.require(:event).permit(:name, :introduction, :date, :url, :giturl, :image_id)
     end
 end

@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-10 offset-1">
+      <p class="page-title">
+        <h1>News詳細</h1>
+      </p>
+      <table class="table">
+        <tr>
+          <th>
+            写真
+          </th>
+          <td>
+            <%= attachment_image_tag @event, :image, size:"150x150", format: 'jpeg' %>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            タイトル
+          </th>
+          <td>
+            <%= @event.name %>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            説明
+          </th>
+          <td>
+            <%= @event.introduction %>
+          </td>
+        </tr>
+          <th>
+            URL
+          </th>
+          <td>
+            <%= @event.url %>
+          </td>
+        </tr>
+        <tr>
+      </table>
+    </div>
+  </div>
+</div>
