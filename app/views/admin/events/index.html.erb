@@ -1,0 +1,36 @@
+<div class="container-fuluid">
+  <div class="row">
+    <div class="col-md-10 offset-1">
+      <h1>News一覧(現在<%= @events.count %>個)</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-center">ID</th>
+            <th class="text-center">タイトル</th>
+            <th class="text-center">URL</th>
+            <th class="text-center">作成日時</th>
+          </tr>
+        </thead>
+        <% @events.each do |event| %>
+        <tbody>
+        <tr>
+          <th class="text-center">
+            <%= event.id %>
+          </th>
+          <td class="text-center">
+          <%= link_to admin_event_path(event) do %>
+            <%= event.name %>
+          <% end %>
+          </td>
+          <td class="text-center">
+            <%= event.url %>
+          </td>
+          <td class="text-center">
+            <%= event.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+          </td>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
