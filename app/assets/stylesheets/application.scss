@@ -17,6 +17,11 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+.underbar{
+  text-decoration:underline;
+  color: #2f4f4f;
+}
+
 .iimage {
   object-fit: cover;
   width: 360px;
@@ -375,5 +380,7 @@ h4{
   background-size: cover;
   background-image: image-url("portfolio.png")
 }
+
+
 
 }

@@ -2,7 +2,7 @@ class ApplicationsController < ApplicationController
 
   def index
     @applications = Application.all
-    @event = Event.all
+    @events = Event.all
   end
 
   def show
